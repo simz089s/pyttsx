@@ -182,7 +182,7 @@ class DummyDriver(object):
         @raise ValueError: When the value cannot be coerced to fit the property
         '''
         if name == 'voice':
-            v = [v for v in self._config['voices'] if v.id == value]
+            v = list(filter(lambda v: v.id == value, self._config['voices']))
             self._config['voice'] = v[0]
         elif name == 'rate':
             self._config['rate'] = value
@@ -190,3 +190,4 @@ class DummyDriver(object):
             self._config['volume'] = value
         else:
             raise KeyError('unknown property %s' % name)
+            

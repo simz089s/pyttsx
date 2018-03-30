@@ -217,3 +217,4 @@ class Engine(object):
         elif self._driverLoop:
             raise RuntimeError('iterate not valid in driver run loop')
         self.proxy.iterate()
+        

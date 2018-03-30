@@ -40,3 +40,4 @@ def init(driverName=None, debug=False):
         eng = Engine(driverName, debug)
         _activeEngines[driverName] = eng
     return eng
+    

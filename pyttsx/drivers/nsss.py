@@ -113,3 +113,4 @@ class NSSpeechDriver(NSObject):
     def speechSynthesizer_willSpeakWord_ofString_(self, tts, rng, text):
         self._proxy.notify('started-word', location=rng.location,
             length=rng.length)
+            

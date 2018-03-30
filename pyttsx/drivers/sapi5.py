@@ -150,3 +150,4 @@ class SAPI5DriverEventSink(object):
         d._speaking = False
         d._stopping = False
         d._proxy.setBusy(False)
+        
